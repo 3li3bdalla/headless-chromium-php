@@ -43,5 +43,8 @@ jobs:
           command: composer update --no-interaction --no-progress --ignore-platform-req=php
         if: "matrix.php >= 8"
 
+      - name: Print Chrome Version
+        run: chrome --version
+
       - name: Execute PHPUnit
         run: vendor/bin/phpunit
